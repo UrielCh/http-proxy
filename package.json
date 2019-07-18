@@ -1,0 +1,29 @@
+{
+  "name": "@u4/http-proxy",
+  "version": "1.0.0",
+  "description": "An simple and moderne Http proxy",
+  "keywords": [
+    "proxy",
+    "http",
+    "https"
+  ],
+  "main": "lib/index",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Uriel Chemouni <uchemouni@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": "https://github.com/UrielCh/http-proxy/issues",
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib",
+    "src"
+  ]
+}
