@@ -11,4 +11,5 @@ export interface RejectionReason {
 export interface QueryInfo {
     domain: string;
     ip?: string;
+    port?: number;
 }

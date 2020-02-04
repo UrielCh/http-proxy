@@ -166,9 +166,11 @@ export class HttpProxy {
       response.end();
       return;
     }
-
+    const {hostname, port} = parse(request.url || '');
+    
     let info: QueryInfo = {
-      domain: '',
+      domain: hostname || '',
+      port: Number(port),
       ip: request.connection.remoteAddress,
     }
 
@@ -228,7 +230,7 @@ export class HttpProxy {
       return;
     }
     
-    const query: QueryInfo = { domain: hostname, ip: request.connection.remoteAddress };
+    const query: QueryInfo = { domain: hostname, port, ip: request.connection.remoteAddress };
 
     if (this.proxyConfig.allow) {
       const rejection = await this.proxyConfig.allow(query);
