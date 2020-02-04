@@ -28,11 +28,15 @@ export const encode_host = (host: HostAction) => {
   }
   
 // special security logging function
-export const security_log = (request: http.IncomingMessage, response: http.ServerResponse, msg: string) => 
-    console.error(`**SECURITY VIOLATION** ${request.connection.remoteAddress}, ${request.method || "!NO METHOD!"} ${request.headers.host || "!NO HOST!"}=>${request.url || "!NO URL!"},${msg}`)
+export const security_log = (request: http.IncomingMessage, response: http.ServerResponse, msg: string) => {
+    // console.error(`**SECURITY VIOLATION** ${request.connection.remoteAddress}, ${request.method || "!NO METHOD!"} ${request.headers.host || "!NO HOST!"}=>${request.url || "!NO URL!"},${msg}`)
+}
   
-export const action_deny = (response: http.ServerResponse, msg: string) => response.writeHead(403).end(msg)
+export const action_deny = (response: http.ServerResponse, msg: string) => {
+  response.writeHead(403).end(msg);
+}
 
-
-export const action_notfound = (response: http.ServerResponse, msg: string) => response.writeHead(404).end(msg);
+export const action_notfound = (response: http.ServerResponse, msg: string) => {
+  response.writeHead(404).end(msg);
+}
 

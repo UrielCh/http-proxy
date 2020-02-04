@@ -109,6 +109,7 @@ export class HttpProxy {
         headers['X-Forwarded-For'] = request.connection.remoteAddress;
       }
     }
+    // console.log('PROXY ' + request.url);
     const parsed = parse(request.url as string);
     const requestOptions: RequestOptions = {
       method: request.method,
@@ -215,7 +216,7 @@ export class HttpProxy {
    * HTTPs support
    */
   async handlerHttps(request: http.IncomingMessage, clientSocket: net.Socket, head: Buffer) { // listen only for HTTP/1.1 CONNECT method
-    console.log(clientSocket.remoteAddress, clientSocket.remotePort, request.method, request.url)
+    // console.log('handlerHttps', clientSocket.remoteAddress, clientSocket.remotePort, request.method, request.url)
     /*
     if (!req.headers['proxy-authorization']) { // here you can add check for any username/password, I just check that this header must exist!
       clientSocket.write('HTTP/1.1 407 Proxy Authentication Required\r\nProxy-Authenticate: Basic realm="proxy"\r\nProxy-Connection: close')
