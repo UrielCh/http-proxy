@@ -96,7 +96,7 @@ export class HttpProxy {
   }
 
   action_proxy(request: http.IncomingMessage, response: http.ServerResponse, host: HostAction) {
-    console.error(`Proxying to ${host}`);
+    // console.error(`Proxying to ${host}`);
     // detect HTTP version
     let legacy_http = request.httpVersionMajor == 1 && request.httpVersionMinor < 1 || request.httpVersionMajor < 1;
     // launch new request + insert proxy specific header

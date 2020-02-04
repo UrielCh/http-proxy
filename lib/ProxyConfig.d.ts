@@ -12,7 +12,7 @@ export interface IProxyConfig {
         ipv6Only?: boolean;
         backlog?: number;
     };
-    allow?: (query: QueryInfo) => Promise<RejectionReason | null>;
+    allow?: (query: QueryInfo) => Promise<RejectionReason | null | undefined>;
 }
 export interface ProxyConfigEvents {
     on(event: 'block', listener: (info: QueryInfo) => void): this;
@@ -26,6 +26,6 @@ export declare class ProxyConfig extends EventEmitter implements IProxyConfig, P
         ipv6Only?: boolean;
         backlog?: number;
     };
-    allow?: (query: QueryInfo) => Promise<RejectionReason | null>;
+    allow?: (query: QueryInfo) => Promise<RejectionReason | null | undefined>;
     constructor(base: IProxyConfig);
 }
