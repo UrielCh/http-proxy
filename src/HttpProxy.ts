@@ -244,7 +244,7 @@ export class HttpProxy {
     const end = (log?: string) => {
       if (serverSocket) {
         if (log)
-          console.error(log)
+          console.error('handlerHttps Error:', request.url, log);
         serverSocket.end()
         serverSocket = null;
       }
