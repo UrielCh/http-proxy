@@ -1,1 +1,0 @@
-{"version":3,"file":"ProxyConfig.js","sourceRoot":"","sources":["../src/ProxyConfig.ts"],"names":[],"mappings":";;AAAA,mCAAsC;AAiBtC,MAAa,WAAY,SAAQ,qBAAY;IAK3C,YAAY,IAAkB;QAC5B,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,MAAM,GAAG,IAAI,CAAC,MAAM,CAAC;QAC1B,IAAI,CAAC,KAAK,GAAG,IAAI,CAAC,KAAK,CAAC;IAC1B,CAAC;CACF;AAVD,kCAUC"}
